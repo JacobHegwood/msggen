@@ -8,6 +8,10 @@ const hobbies = [];
 
 const professions = [];
 
+// name of character
+
+const characterName = "Ryan";
+
 // set up a pool of messages
 
 console.log("running");
