@@ -2,16 +2,43 @@
 
 // parts pool
 
-const birthplace = [];
-
-const hobbies = [];
-
-const professions = [];
+const birthplace = ["Timbuktu", "Darville", "Dunderport"];
+const hobbies = [
+  "playing banjo",
+  "jogging",
+  "slaying elves",
+  "fighting zombies",
+  "gathering treasures",
+];
+const professions = ["magician", "cleric", "shop keeper", "thief"];
 
 // name of character
+const characterName = "Angela";
 
-const characterName = "Ryan";
+// gender of character
+const characterGender = "Female";
 
-// set up a pool of messages
+// select the parts
+const selBirthplace = birthplace[Math.floor(Math.random() * birthplace.length)];
+const selHobbies = hobbies[Math.floor(Math.random() * hobbies.length)];
+const selProfessions =
+  professions[Math.floor(Math.random() * professions.length)];
 
-console.log("running");
+// gender pronoun method
+const getGender = (gender) => {
+  if (gender.toLowerCase() === "male") {
+    return "his";
+  } else if (gender.toLowerCase() === "female") {
+    return "her";
+  } else {
+    return "their";
+  }
+};
+
+// construct the message
+
+console.log(
+  `${characterName} is from ${selBirthplace}, and has spent most of ${getGender(
+    characterGender
+  )} life working as a ${selHobbies}. They enjoy ${selHobbies}.`
+);
